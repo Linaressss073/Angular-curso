@@ -1,0 +1,19 @@
+<h1>Calculadora</h1>
+<hr>
+
+<!-- #inputA y #inputB son "template reference variables": sirven para leer el valor del input desde el HTML -->
+<input #inputA type="number" placeholder="Número A" />
+<input #inputB type="number" placeholder="Número B" />
+
+<hr>
+
+<!-- +inputA.value convierte el string del input a número antes de pasarlo al método -->
+<button (click)="sumar(+inputA.value, +inputB.value)">Sumar (+)</button>
+<button (click)="restar(+inputA.value, +inputB.value)">Restar (-)</button>
+<button (click)="multiplicar(+inputA.value, +inputB.value)">Multiplicar (×)</button>
+<button (click)="dividir(+inputA.value, +inputB.value)">Dividir (÷)</button>
+
+<hr>
+
+<!-- {{ resultant }} muestra el valor de la propiedad "resultant" del componente -->
+<h2>Resultado: {{ resultant }}</h2>
